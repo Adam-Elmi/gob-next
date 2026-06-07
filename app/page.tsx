@@ -198,7 +198,7 @@ export default function Home() {
           <Laptop size={30} />
           <div>
             <span className="kicker">Bilow maanta</span>
-            <h2>Gob geli kombiyuutarkaaga.</h2>
+            <h2>Gob kulasoo Deg Kombiyuutarkaaga</h2>
             <p>
               Dooro nidaamkaaga, lasoo deg Gob, kadib qor barnaamijkaaga koowaad.
             </p>

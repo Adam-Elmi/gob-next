@@ -29,7 +29,7 @@ export default function DownloadsPage() {
       <Header />
       <main className="legal-page">
         <span className="kicker">Gob CLI</span>
-        <h1>Gob geli kombiyuutarkaaga.</h1>
+        <h1>Gob kulasoo Deg Kombiyuutarkaaga</h1>
         <p className="lead">
           Windows release-ka koowaad waa diyaar. Linux weli waa la diyaarinayaa,
           waxaana lagu dari doonaa GitHub Releases marka uu diyaar noqdo.
