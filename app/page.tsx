@@ -54,7 +54,7 @@ export default function Home() {
             <div className="terminal" aria-label="Gob code example">
               <div className="terminal-top">
                 <span>hello.gob</span>
-                <span className="terminal-command">gob.exe hello.gob</span>
+                <span className="terminal-command">gob.exe -f hello.gob</span>
               </div>
               <pre>
                 <code>
@@ -178,7 +178,7 @@ export default function Home() {
           </div>
           <div className="app-copy">
             <span className="kicker">Gob Mobile</span>
-            <h2>Fahamka ka hor syntax-ka.</h2>
+            <h2>Programming-ka Af-Soomaali ku baro.</h2>
             <p>
               App-ka Gob wuxuu ku dhigaa programming-ka Af-Soomaali, isagoo
               ku kaydinaya halka aad marayso iyo casharrada aad dhammaysay.

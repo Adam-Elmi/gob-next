@@ -47,7 +47,7 @@ export function Footer() {
         <Link href="/support">Caawimaad</Link>
         <Link href="/privacy">Siyaasada Asturnaanta</Link>
       </div>
-      <p className="copyright">© 2026 Gob</p>
+      <p className="copyright">©2026 Gob</p>
     </footer>
   );
 }

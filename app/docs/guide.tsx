@@ -12,6 +12,7 @@ import { useState } from "react";
 const topics = [
   { id: "hordhac", label: "Hordhac", group: "Bilow" },
   { id: "lasoo-deg", label: "Lasoo deg", group: "Bilow" },
+  { id: "cli", label: "Isticmaalka CLI-ga", group: "Bilow" },
   { id: "casharka-koowaad", label: "Casharka koowaad", group: "Bilow" },
   { id: "daabac", label: "Daabac iyo daabacLn", group: "Aasaaska" },
   { id: "doorsomeyaal", label: "Doorsomeyaal", group: "Aasaaska" },
@@ -133,10 +134,42 @@ function TopicContent({ id }: { id: string }) {
             executable-ka iyo faylka isku qor.
           </p>
           <p>Hubi inuu Gob shaqaynayo adigoo socodsiinaya fayl Gob ah:</p>
-          <Code>gob.exe hello.gob</Code>
+          <Code>gob.exe -f hello.gob</Code>
           <p className="doc-note">
             Haddii Windows uusan helin <code>gob.exe</code>, ku qor jidka buuxa
             ama executable-ka iyo faylka Gob hal gal geli.
+          </p>
+        </>
+      );
+    case "cli":
+      return (
+        <>
+          <h1>Isticmaalka CLI-ga</h1>
+          <p className="lead">
+            Gob CLI wuxuu kuu oggolaanayaa inaad fayl socodsiiso, code toos u
+            qorto, ama aad aragto hagista amarrada.
+          </p>
+          <h2>Fayl Gob socodsii</h2>
+          <p>
+            Adeegso <code>-f</code> ama <code>--file</code>, kadib magaca faylka
+            ku dhammaada <code>.gob</code>.
+          </p>
+          <Code>{`gob.exe -f hello.gob\n\ngob.exe --file hello.gob`}</Code>
+          <h2>Code toos u qor</h2>
+          <p>
+            Adeegso <code>-q</code> ama <code>--qor</code> si aad terminal-ka
+            dhexdiisa code Gob ugu qorto.
+          </p>
+          <Code>{`gob.exe -q\n\ngob.exe --qor`}</Code>
+          <h2>Hagista amarrada</h2>
+          <p>
+            Adeegso <code>-c</code> ama <code>--caawi</code> si aad u aragto
+            amarrada CLI-ga.
+          </p>
+          <Code>{`gob.exe -c\n\ngob.exe --caawi`}</Code>
+          <p className="doc-note">
+            Linux-ka, isticmaal <code>gob</code> halkii aad ka isticmaali
+            lahayd <code>gob.exe</code>.
           </p>
         </>
       );
@@ -155,7 +188,7 @@ function TopicContent({ id }: { id: string }) {
             sheegaysaa halka amarku ku dhammaaday.
           </p>
           <p>Ku socodsii:</p>
-          <Code>gob.exe hello.gob</Code>
+          <Code>gob.exe -f hello.gob</Code>
           <p>Waxaad arki doontaa:</p>
           <Code>Salaan Gob</Code>
           <p className="doc-note">

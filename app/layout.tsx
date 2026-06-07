@@ -8,10 +8,6 @@ export const metadata: Metadata = {
   },
   description:
     "Baro programming-ka Af-Soomaali, soo degso Gob CLI ee Windows, oo akhri hagaha luuqadda Gob.",
-  icons: {
-    icon: "/brand/gob.png",
-    apple: "/brand/gob.png",
-  },
 };
 
 export default function RootLayout({
