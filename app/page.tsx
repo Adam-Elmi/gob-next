@@ -1,65 +1,214 @@
-import Image from "next/image";
+import Link from "next/link";
+import {
+  ArrowRight,
+  BookOpen,
+  Download,
+  GraduationCap,
+  Laptop,
+  Play,
+  Terminal,
+} from "lucide-react";
+import { FaGithub } from "react-icons/fa";
+import { Footer, Header } from "./site-chrome";
+
+const codeLines = [
+  ["keyword", "door"],
+  ["plain", " fariin = "],
+  ["string", '"Soo dhawoow Gob"'],
+  ["plain", ";"],
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <Header />
+      <main>
+        <section className="hero">
+          <div className="hero-inner">
+            <div className="eyebrow">Luuqad furan. Waxbarasho Af-Soomaali ah.</div>
+            <h1>Gob</h1>
+            <p className="hero-lead">Programming ku hadlaya Af-Soomaali.</p>
+            <p className="hero-copy">
+              Baro fikradaha programming-ka mobile-ka, ku qor Gob
+              kombiyuutarkaaga, kana qayb qaado horumarintiisa.
+            </p>
+            <div className="hero-actions">
+              <Link className="button button-gold" href="/downloads">
+                <Download size={18} /> Soo degso Gob
+              </Link>
+              <Link className="button button-quiet" href="/docs">
+                <BookOpen size={18} /> Akhri hagaha
+              </Link>
+              <a
+                className="icon-button"
+                href="https://github.com/yaseressa/gob"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Gob on GitHub"
+                title="Gob on GitHub"
+              >
+                <FaGithub size={21} />
+              </a>
+            </div>
+
+            <div className="terminal" aria-label="Gob code example">
+              <div className="terminal-top">
+                <span>hello.gob</span>
+                <span className="terminal-command">gob.exe hello.gob</span>
+              </div>
+              <pre>
+                <code>
+                  {codeLines.map(([kind, value], index) => (
+                    <span className={kind} key={`${value}-${index}`}>
+                      {value}
+                    </span>
+                  ))}
+                  {"\n"}
+                  <span className="keyword">daabac</span>
+                  <span className="plain">(fariin);</span>
+                  {"\n\n"}
+                  <span className="comment">{"// Soo dhawoow Gob"}</span>
+                </code>
+              </pre>
+            </div>
+          </div>
+        </section>
+
+        <section className="section intro-section">
+          <div className="section-heading">
+            <span className="kicker">Hal mashruuc, laba albaab</span>
+            <h2>Baro. Qor. Dhis.</h2>
+            <p>
+              Gob wuxuu isku xiraa barashada programming-ka iyo luuqad aad si
+              dhab ah ugu qori karto barnaamijyo.
+            </p>
+          </div>
+          <div className="feature-grid">
+            <article className="feature">
+              <GraduationCap size={26} />
+              <h3>Ku baro app-ka</h3>
+              <p>
+                Casharro, mawduucyo iyo tijaabooyin si tartiib ah kuugu dhisa
+                fahamka programming-ka.
+              </p>
+              <Link href="/#mobile">
+                Eeg mobile app-ka <ArrowRight size={16} />
+              </Link>
+            </article>
+            <article className="feature">
+              <Terminal size={26} />
+              <h3>Ku qor terminal-ka</h3>
+              <p>
+                Soo degso Gob CLI, samee faylkaaga koowaad, kadibna si toos ah
+                uga orod kombiyuutarkaaga.
+              </p>
+              <Link href="/downloads">
+                Eeg Lasoo Degista <ArrowRight size={16} />
+              </Link>
+            </article>
+            <article className="feature">
+              <FaGithub size={26} />
+              <h3>Ka qayb qaado</h3>
+              <p>
+                Gob waa mashruuc furan. Akhri source-ka, soo gudbi fikrad ama
+                naga caawi horumarintiisa.
+              </p>
+              <a
+                href="https://github.com/yaseressa/gob"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Fur GitHub <ArrowRight size={16} />
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <section className="section language-band">
+          <div className="language-copy">
+            <span className="kicker">Luuqadda Gob</span>
+            <h2>Fikraddaada si cad u qor.</h2>
+            <p>
+              Ereyada Gob waxay ka soo baxaan Af-Soomaaliga: si aad maskaxdaada
+              ugu hayso dhibaatada aad xallinayso, ma aha turjumaadda syntax-ka.
+            </p>
+            <Link className="text-link light-link" href="/docs">
+              Bilow hagaha <ArrowRight size={17} />
+            </Link>
+          </div>
+          <dl className="language-words">
+            <div>
+              <dt>door</dt>
+              <dd>samee doorsome</dd>
+            </div>
+            <div>
+              <dt>kol</dt>
+              <dd>hubi shuruud</dd>
+            </div>
+            <div>
+              <dt>intay</dt>
+              <dd>samee wareeg</dd>
+            </div>
+            <div>
+              <dt>daabac</dt>
+              <dd>soo bandhig xog</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section className="section app-section" id="mobile">
+          <div className="app-visual">
+            <div className="phone-frame">
+              <div className="phone-bar" />
+              <div className="phone-brand">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/brand/gob.png" alt="" />
+                <strong>Asc, Yaser</strong>
+              </div>
+              <p>Kusoo dhawoow Gob, kuna baro afkaaga hooyo programming-ka.</p>
+              <div className="lesson-preview">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/brand/fundamentals-banner.png" alt="" />
+                <div>
+                  <strong>Aasaaska Gob</strong>
+                  <span>50% dhammaatay</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="app-copy">
+            <span className="kicker">Gob Mobile</span>
+            <h2>Fahamka ka hor syntax-ka.</h2>
+            <p>
+              App-ka Gob wuxuu kuu dhigaa programming-ka Af-Soomaali, isagoo
+              kuu kaydinaya halka aad marayso iyo casharrada aad dhammaysay.
+            </p>
+            <ul className="check-list">
+              <li>Casharro nidaamsan oo Af-Soomaali ah</li>
+              <li>Progress-kaaga oo meel walba kula socda</li>
+              <li>Playground aad fikradaha ku tijaabiso</li>
+            </ul>
+            <span className="availability">
+              <Play size={17} /> Android release-ka ugu horreeya wuu soo socdaa
+            </span>
+          </div>
+        </section>
+
+        <section className="section release-section">
+          <Laptop size={30} />
+          <div>
+            <span className="kicker">Bilow maanta</span>
+            <h2>Gob geli kombiyuutarkaaga.</h2>
+            <p>
+              Dooro nidaamkaaga, lasoo deg Gob, kadib qor barnaamijkaaga koowaad.
+            </p>
+          </div>
+          <Link className="button button-dark" href="/downloads">
+            Lasoo Degis <ArrowRight size={18} />
+          </Link>
+        </section>
       </main>
-    </div>
+      <Footer />
+    </>
   );
 }
