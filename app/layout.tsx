@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | Gob",
   },
   description:
-    "Baro programming-ka Af-Soomaali, soo degso Gob CLI ee Windows, oo akhri hagaha luuqadda Gob.",
+    "Ku Baro programming-ka Af-Soomaali, soo degso Gob CLI ee Windows, oo akhri hagaha luuqadda Gob.",
   robots: {
     index: true,
     follow: true,

@@ -31,7 +31,7 @@ export default function Home() {
             <h1>Gob</h1>
             <p className="hero-lead">Programming ku hadlaya Af-Soomaali.</p>
             <p className="hero-copy">
-              Baro fikradaha programming-ka mobile-ka, ku qor Gob
+              Baro fikradaha programming-ka, ku qor Gob
               kombiyuutarkaaga, kana qayb qaado horumarintiisa.
             </p>
             <div className="hero-actions">
