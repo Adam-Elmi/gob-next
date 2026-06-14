@@ -24,7 +24,9 @@ export default function SupportPage() {
           haddii ay suurtagal tahay. Waxaad issue ka furi kartaa{" "}
           <a
             className="text-link"
-            href="https://github.com/yaseressa/gob/issues"
+            href="https://github.com/Luqadda-Gob/gob/issues"
+            target="_blank"
+            rel="noreferrer"
           >
             GitHub
           </a>

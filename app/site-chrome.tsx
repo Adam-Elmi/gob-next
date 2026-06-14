@@ -16,7 +16,7 @@ export function Header() {
         <Link href="/support">Caawimaad</Link>
         <a
           className="nav-icon"
-          href="https://github.com/yaseressa/gob"
+          href="https://github.com/Luqadda-Gob/gob"
           target="_blank"
           rel="noreferrer"
           aria-label="GitHub"

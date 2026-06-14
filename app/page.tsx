@@ -4,12 +4,14 @@ import {
   Download,
   GraduationCap,
   Laptop,
-  Play,
   Smartphone,
   Terminal,
 } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { Footer, Header } from "./site-chrome";
+
+const androidDownloadUrl =
+  "https://github.com/Luqadda-Gob/gob/releases/download/FL_1.0.0/gob-mobile.apk";
 
 const codeLines = [
   ["keyword", "door"],
@@ -41,7 +43,7 @@ export default function Home() {
               </Link>
               <a
                 className="icon-button"
-                href="https://github.com/yaseressa/gob"
+                href="https://github.com/Luqadda-Gob/gob"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Gob on GitHub"
@@ -114,7 +116,7 @@ export default function Home() {
                 naga caawi horumarintiisa.
               </p>
               <a
-                href="https://github.com/yaseressa/gob"
+                href="https://github.com/Luqadda-Gob/gob"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -188,12 +190,18 @@ export default function Home() {
               <li>Horumarkaaga oo meel walba kula socda</li>
               <li>Goobta Tijaabinta oo aad fikradaha ku tijaabiso</li>
             </ul>
-            <span className="availability">
-              <Play size={17} /> Android release-ka ugu horreeya wuu soo socdaa
-            </span>
-            <Link className="text-link app-download-link" href="/downloads">
-              Eeg Lasoo Degista <ArrowRight size={17} />
-            </Link>
+            <div className="app-download-actions">
+              <a
+                className="button button-gold app-android-download"
+                href={androidDownloadUrl}
+                rel="noreferrer"
+              >
+                <Download size={17} /> Android lasoo deg
+              </a>
+              <Link className="text-link app-download-link" href="/downloads">
+                Eeg Lasoo Degista <ArrowRight size={17} />
+              </Link>
+            </div>
           </div>
         </section>
 

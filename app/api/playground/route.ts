@@ -30,7 +30,14 @@ export async function POST(request: Request) {
       );
     }
 
-    return NextResponse.json({ result: data?.result ?? "" });
+    const errors = Array.isArray(data?.errors)
+      ? data.errors.map((error: unknown) => String(error))
+      : [];
+
+    return NextResponse.json({
+      result: data?.result ?? "",
+      errors,
+    });
   } catch {
     return NextResponse.json(
       { error: "Playground-ka lama xiriiri karo. Mar kale isku day." },

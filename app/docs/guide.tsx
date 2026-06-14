@@ -57,6 +57,10 @@ function Code({
         setError(data.error ?? "Code-ku ma socon.");
         return;
       }
+      if (Array.isArray(data.errors) && data.errors.length > 0) {
+        setError(data.errors.join("\n"));
+        return;
+      }
       setOutput(
         data.result || "Code-ku wuu dhammaaday, wax natiijo ahna ma soo saarin.",
       );
@@ -117,7 +121,7 @@ function TopicContent({ id }: { id: string }) {
           </p>
           <a
             className="button button-dark"
-            href="https://github.com/yaseressa/gob/releases"
+            href="https://github.com/Luqadda-Gob/gob/releases"
             target="_blank"
             rel="noreferrer"
           >

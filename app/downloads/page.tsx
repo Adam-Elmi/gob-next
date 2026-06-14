@@ -4,13 +4,15 @@ import {
   Download,
   GraduationCap,
   Monitor,
-  Play,
   Smartphone,
   Terminal,
 } from "lucide-react";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { Footer, Header } from "../site-chrome";
+
+const androidDownloadUrl =
+  "https://github.com/Luqadda-Gob/gob/releases/download/FL_1.0.0/gob-mobile.apk";
 
 export const metadata: Metadata = {
   title: "Lasoo Degis",
@@ -56,9 +58,13 @@ export default function DownloadsPage() {
               Goobta Tijaabinta oo aad code-ka Gob ku tijaabiso.
             </p>
             <div className="mobile-download-actions">
-              <span className="status-pill">
-                <Play size={14} /> Android · Soo socda
-              </span>
+              <a
+                className="download-action"
+                href={androidDownloadUrl}
+                rel="noreferrer"
+              >
+                <Download size={15} /> Android lasoo deg
+              </a>
               <Link className="text-link" href="/#mobile">
                 Wax badan ka ogow <BookOpen size={16} />
               </Link>
@@ -119,7 +125,7 @@ export default function DownloadsPage() {
         </p>
         <a
           className="button button-dark"
-          href="https://github.com/yaseressa/gob/releases"
+          href="https://github.com/Luqadda-Gob/gob/releases"
           target="_blank"
           rel="noreferrer"
         >
