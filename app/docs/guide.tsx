@@ -138,7 +138,7 @@ function TopicContent({ id }: { id: string }) {
             executable-ka iyo faylka isku qor.
           </p>
           <p>Hubi inuu Gob shaqaynayo adigoo socodsiinaya fayl Gob ah:</p>
-          <Code>gob.exe -f hello.gob</Code>
+          <Code key="lasoo-deg-check">gob.exe -f hello.gob</Code>
           <p className="doc-note">
             Haddii Windows uusan helin <code>gob.exe</code>, ku qor jidka buuxa
             ama executable-ka iyo faylka Gob hal gal geli.
@@ -158,19 +158,19 @@ function TopicContent({ id }: { id: string }) {
             Adeegso <code>-f</code> ama <code>--file</code>, kadib magaca faylka
             ku dhammaada <code>.gob</code>.
           </p>
-          <Code>{`gob.exe -f hello.gob\n\ngob.exe --file hello.gob`}</Code>
+          <Code key="cli-file">{`gob.exe -f hello.gob\n\ngob.exe --file hello.gob`}</Code>
           <h2>Code toos u qor</h2>
           <p>
             Adeegso <code>-q</code> ama <code>--qor</code> si aad terminal-ka
             dhexdiisa code Gob ugu qorto.
           </p>
-          <Code>{`gob.exe -q\n\ngob.exe --qor`}</Code>
+          <Code key="cli-write">{`gob.exe -q\n\ngob.exe --qor`}</Code>
           <h2>Hagista amarrada</h2>
           <p>
             Adeegso <code>-c</code> ama <code>--caawi</code> si aad u aragto
             amarrada CLI-ga.
           </p>
-          <Code>{`gob.exe -c\n\ngob.exe --caawi`}</Code>
+          <Code key="cli-help">{`gob.exe -c\n\ngob.exe --caawi`}</Code>
           <p className="doc-note">
             Linux-ka, isticmaal <code>gob</code> halkii aad ka isticmaali
             lahayd <code>gob.exe</code>.
@@ -185,16 +185,16 @@ function TopicContent({ id }: { id: string }) {
           <p>
             Abuur fayl la yiraahdo <code>hello.gob</code>, kadib geli:
           </p>
-          <Code runnable>{`daabacLn "Salaan Gob";`}</Code>
+          <Code key="casharka-koowaad-example" runnable>{`daabacLn "Salaan Gob";`}</Code>
           <p>
             <code>daabacLn</code> waa amar Gob ku yiraahda qoraalka ku jira
             calaamadaha xigashada soo bandhig. Calaamadda <code>;</code> waxay
             sheegaysaa halka amarku ku dhammaaday.
           </p>
           <p>Ku socodsii:</p>
-          <Code>gob.exe -f hello.gob</Code>
+          <Code key="casharka-koowaad-run">gob.exe -f hello.gob</Code>
           <p>Waxaad arki doontaa:</p>
-          <Code>Salaan Gob</Code>
+          <Code key="casharka-koowaad-output">Salaan Gob</Code>
           <p className="doc-note">
             Hambalyo. Waxaad qortay barnaamijkaagii ugu horreeyay ee Gob.
           </p>
@@ -207,13 +207,13 @@ function TopicContent({ id }: { id: string }) {
           <p className="lead">
             Gob wuxuu leeyahay laba hab oo qoraal lagu soo bandhigo.
           </p>
-          <Code runnable>{`daabac "Salaan";\ndaabacLn "Salaan";`}</Code>
+          <Code key="daabac-example" runnable>{`daabac "Salaan";\ndaabacLn "Salaan";`}</Code>
           <p>
             <code>daabacLn</code> wuxuu ku daraa khad cusub marka uu dhammeeyo.
             <code> daabac</code> se qoraalka xiga isla khadka ayuu ku sii
             qorayaa.
           </p>
-          <Code>{`daabacLn "Gob";\ndaabacLn "Programming";\n\n// Natiijo:\nGob\nProgramming`}</Code>
+          <Code key="daabac-output">{`daabacLn "Gob";\ndaabacLn "Programming";\n\n// Natiijo:\nGob\nProgramming`}</Code>
         </>
       );
     case "doorsomeyaal":
@@ -224,7 +224,7 @@ function TopicContent({ id }: { id: string }) {
             Doorsome waa meel xog lagu kaydiyo. Gob wuxuu isticmaalaa erayga{" "}
             <code>door</code>.
           </p>
-          <Code runnable>{`door magac = "Yaser";\ndoor da = 22;\n\ndaabacLn magac;`}</Code>
+          <Code key="doorsomeyaal-create" runnable>{`door magac = "Yaser";\ndoor da = 22;\n\ndaabacLn magac;`}</Code>
           <h2>Sida doorsome loo sameeyo</h2>
           <p>
             Marka hore qor <code>door</code>, kadib magac aad xogta ku garan
@@ -234,7 +234,7 @@ function TopicContent({ id }: { id: string }) {
             Qiimaha doorsomaha waa la beddeli karaa. Tusaalahan da&apos;du waxay
             ka bilaabanaysaa 22 kadibna waxay noqonaysaa 23.
           </p>
-          <Code runnable>{`door da = 22;\nda = 23;\ndaabacLn da;`}</Code>
+          <Code key="doorsomeyaal-update" runnable>{`door da = 22;\nda = 23;\ndaabacLn da;`}</Code>
         </>
       );
     case "noocyada-xogta":
@@ -242,7 +242,7 @@ function TopicContent({ id }: { id: string }) {
         <>
           <h1>Noocyada xogta</h1>
           <p className="lead">Gob wuxuu leeyahay noocyo xogeed aasaasi ah.</p>
-          <Code runnable>{`// Qoraal\ndoor magac = "Gob";\n\n// Tiro\ndoor da = 22;\n\n// Run iyo been\ndoor sax = run;\ndoor khalad = been;\n\n// Ban\ndoor waxba = ban;`}</Code>
+          <Code key="noocyada-xogta-types" runnable>{`// Qoraal\ndoor magac = "Gob";\n\n// Tiro\ndoor da = 22;\n\n// Run iyo been\ndoor sax = run;\ndoor khalad = been;\n\n// Ban\ndoor waxba = ban;`}</Code>
           <p>
             <code>ban</code> waxaa la isticmaalaa marka qiime aanu jirin.
           </p>
@@ -252,7 +252,7 @@ function TopicContent({ id }: { id: string }) {
             Tirooyin waa la isku dari karaa, qoraallo waa la isku xiri karaa,
             halka <code>run</code> iyo <code>been</code> lagu hago go&apos;aamada.
           </p>
-          <Code runnable>{`door magacaKoowaad = "Gob";\ndoor magacaLabaad = " Language";\ndaabacLn magacaKoowaad + magacaLabaad;`}</Code>
+          <Code key="noocyada-xogta-strings" runnable>{`door magacaKoowaad = "Gob";\ndoor magacaLabaad = " Language";\ndaabacLn magacaKoowaad + magacaLabaad;`}</Code>
         </>
       );
     case "xisaab":
@@ -260,7 +260,7 @@ function TopicContent({ id }: { id: string }) {
         <>
           <h1>Xisaab</h1>
           <p className="lead">Gob wuxuu taageeraa xisaabaha caadiga ah.</p>
-          <Code runnable>{`daabacLn 10 + 5;\ndaabacLn 10 - 5;\ndaabacLn 10 * 5;\ndaabacLn 10 / 5;\ndaabacLn 10 % 3;`}</Code>
+          <Code key="xisaab-operators" runnable>{`daabacLn 10 + 5;\ndaabacLn 10 - 5;\ndaabacLn 10 * 5;\ndaabacLn 10 / 5;\ndaabacLn 10 % 3;`}</Code>
           <p>
             Natiijada ugu dambeysa waa <code>1</code>, sababtoo ah 10 marka loo
             qaybiyo 3 hadhaagu waa 1.
@@ -270,7 +270,7 @@ function TopicContent({ id }: { id: string }) {
             Isticmaal qaws si aad u caddeyso xisaabta marka hawlo badan isku
             jiraan.
           </p>
-          <Code runnable>{`door qiime = (10 + 5) * 2;\ndaabacLn qiime;`}</Code>
+          <Code key="xisaab-precedence" runnable>{`door qiime = (10 + 5) * 2;\ndaabacLn qiime;`}</Code>
         </>
       );
     case "shuruudo":
@@ -284,7 +284,7 @@ function TopicContent({ id }: { id: string }) {
             Gob wuxuu isticmaalaa <code>kol</code>, <code>kolkale</code>, iyo{" "}
             <code>kale</code>.
           </p>
-          <Code runnable>{`door score = 75;\n\nkol (score >= 90) {\n    daabacLn "A";\n} kolkale (score >= 70) {\n    daabacLn "B";\n} kale {\n    daabacLn "C";\n}`}</Code>
+          <Code key="shuruudo-example" runnable>{`door score = 75;\n\nkol (score >= 90) {\n    daabacLn "A";\n} kolkale (score >= 70) {\n    daabacLn "B";\n} kale {\n    daabacLn "C";\n}`}</Code>
           <h2>Sida loo akhriyo</h2>
           <p>
             Gob wuxuu marka hore hubiyaa shuruudda <code>kol</code>. Haddii ay
@@ -309,7 +309,7 @@ function TopicContent({ id }: { id: string }) {
             <code>intay</code> iyo <code>wareeg</code> ayaa loo isticmaalaa ku
             celcelinta.
           </p>
-          <Code runnable>{`door i = 0;\n\nintay (i < 5) {\n    daabacLn i;\n    i += 1;\n}\n\nwareeg (door j = 0; j < 5; j += 1) {\n    daabacLn j;\n}`}</Code>
+          <Code key="ku-celcelin-example" runnable>{`door i = 0;\n\nintay (i < 5) {\n    daabacLn i;\n    i += 1;\n}\n\nwareeg (door j = 0; j < 5; j += 1) {\n    daabacLn j;\n}`}</Code>
           <h2>Intay iyo wareeg</h2>
           <p>
             Isticmaal <code>intay</code> marka ku celcelintu ku xiran tahay
@@ -327,14 +327,14 @@ function TopicContent({ id }: { id: string }) {
         <>
           <h1>Taxaneyaal</h1>
           <p className="lead">Taxane waa ururin xog ah.</p>
-          <Code runnable>{`door magacyo = ["Ali", "Ayaan", "Yaser"];\n\ndaabacLn magacyo[0];\nmagacyo[1] = "Ahmed";\ndaabacLn dherer(magacyo);`}</Code>
+          <Code key="taxaneyaal-basics" runnable>{`door magacyo = ["Ali", "Ayaan", "Yaser"];\n\ndaabacLn magacyo[0];\nmagacyo[1] = "Ahmed";\ndaabacLn dherer(magacyo);`}</Code>
           <p>
             Boosaska taxanuhu waxay ka bilaabmaan <code>0</code>. Sidaas darteed
             <code>magacyo[0]</code> waa qiimaha koowaad, halka{" "}
             <code>dherer(magacyo)</code> uu soo celinayo tirada qiimayaasha.
           </p>
           <h2>Taxane ku dhex wareeg</h2>
-          <Code runnable>{`door tirooyin = [2, 4, 6, 8];\n\nwareeg (door i = 0; i < dherer(tirooyin); i += 1) {\n    daabacLn tirooyin[i];\n}`}</Code>
+          <Code key="taxaneyaal-loop" runnable>{`door tirooyin = [2, 4, 6, 8];\n\nwareeg (door i = 0; i < dherer(tirooyin); i += 1) {\n    daabacLn tirooyin[i];\n}`}</Code>
         </>
       );
     case "qabteyaal":
@@ -342,7 +342,7 @@ function TopicContent({ id }: { id: string }) {
         <>
           <h1>Qabteyaal</h1>
           <p className="lead">Qabte waa shaqo dib loo isticmaali karo.</p>
-          <Code runnable>{`qabte salaan(magac) {\n    daabacLn "Salaan " + magac;\n}\n\nqabte iskuDar(a, b) {\n    celi a + b;\n}\n\ndoor jawaab = iskuDar(10, 20);\ndaabacLn jawaab;`}</Code>
+          <Code key="qabteyaal-example" runnable>{`qabte salaan(magac) {\n    daabacLn "Salaan " + magac;\n}\n\nqabte iskuDar(a, b) {\n    celi a + b;\n}\n\ndoor jawaab = iskuDar(10, 20);\ndaabacLn jawaab;`}</Code>
           <p>
             Qiimayaasha qabtuhu qaato waxaa la yiraahdaa parameters. Erayga{" "}
             <code>celi</code> wuxuu jawaabta qabtaha dib ugu gudbiyaa meesha
@@ -365,7 +365,7 @@ function TopicContent({ id }: { id: string }) {
           <p>
             <code>kan</code> wuxuu tilmaamayaa object-ka hadda shaqaynaya.
           </p>
-          <Code runnable>{`cayn Qof {\n    Qof(magac) {\n        kan.magac = magac;\n    }\n\n    salaan() {\n        daabacLn "Salaan";\n    }\n}`}</Code>
+          <Code key="caynyo-example" runnable>{`cayn Qof {\n    Qof(magac) {\n        kan.magac = magac;\n    }\n\n    salaan() {\n        daabacLn "Salaan";\n    }\n}`}</Code>
           <p>
             Constructor-ku wuxuu diyaariyaa object cusub. Methods-ku waa
             qabteyaal uu object-ku leeyahay, halka <code>kan</code> uu kuu
@@ -381,7 +381,7 @@ function TopicContent({ id }: { id: string }) {
           <p>
             <code>ab</code> wuxuu tilmaamayaa caynka laga dhaxlay.
           </p>
-          <Code runnable>{`cayn Arday dhaxal Qof {\n    salaan() {\n        ab.salaan();\n    }\n}`}</Code>
+          <Code key="dhaxal-example" runnable>{`cayn Arday dhaxal Qof {\n    salaan() {\n        ab.salaan();\n    }\n}`}</Code>
           <p>
             Dhaxalku wuxuu kaa ilaalinayaa inaad dib u qorto waxyaabaha ay
             caynyadu wadaagaan. <code>Arday</code> wuxuu helayaa awoodaha{" "}
@@ -403,7 +403,7 @@ function TopicContent({ id }: { id: string }) {
             Beddel <code>hawl</code> una dhig <code>+</code>, <code>-</code>,{" "}
             <code>*</code>, ama <code>/</code>, kadib socodsii.
           </p>
-          <Code runnable>{`door tiroKoowaad = 20;\ndoor tiroLabaad = 5;\ndoor hawl = "+";\n\nkol (hawl == "+") {\n    daabacLn tiroKoowaad + tiroLabaad;\n} kolkale (hawl == "-") {\n    daabacLn tiroKoowaad - tiroLabaad;\n} kolkale (hawl == "*") {\n    daabacLn tiroKoowaad * tiroLabaad;\n} kolkale (hawl == "/") {\n    kol (tiroLabaad == 0) {\n        daabacLn "Eber wax laguma qaybin karo";\n    } kale {\n        daabacLn tiroKoowaad / tiroLabaad;\n    }\n} kale {\n    daabacLn "Hawl aan la aqoon";\n}`}</Code>
+          <Code key="mashruuca-koowaad-calculator" runnable>{`door tiroKoowaad = 20;\ndoor tiroLabaad = 5;\ndoor hawl = "+";\n\nkol (hawl == "+") {\n    daabacLn tiroKoowaad + tiroLabaad;\n} kolkale (hawl == "-") {\n    daabacLn tiroKoowaad - tiroLabaad;\n} kolkale (hawl == "*") {\n    daabacLn tiroKoowaad * tiroLabaad;\n} kolkale (hawl == "/") {\n    kol (tiroLabaad == 0) {\n        daabacLn "Eber wax laguma qaybin karo";\n    } kale {\n        daabacLn tiroKoowaad / tiroLabaad;\n    }\n} kale {\n    daabacLn "Hawl aan la aqoon";\n}`}</Code>
           <h2>Waxaad ku tababaranaysaa</h2>
           <ul>
             <li>Kaydinta tirooyinka iyo hawsha la dooranayo</li>
