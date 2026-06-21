@@ -1,18 +1,7 @@
 import lexer from "./lexer";
 import { TOKEN_TYPES, KEYWORDS } from "./tokenTypes";
 import { colors } from "./colors";
-console.log(lexer(`
-    qabte salaan(magac) {
-        daabacLn "Salaan " + magac;
-    }
 
-    qabte iskuDar(a, b) {
-        celi a + b;
-    }
-
-    door jawaab = iskuDar(10, 20);
-    daabacLn jawaab;
-`))
 const addStyle = (token: string, color: string, isBold: boolean = false, isItalic: boolean = false) => {
     return `<span style='color:${color}; ${isBold ? "font-weight: bold;" : ""}${isItalic ? "font-style: italic;" : ""}'>${token}</span>`
 };
@@ -45,7 +34,6 @@ export default function highlightText(text: string) {
                     highlightedTokens.push(addStyle(token.value, colors.number));
                 }
                 else if (token.type === TOKEN_TYPES.VAR) {
-                    console.log("Here: ", token.value)
                     highlightedTokens.push(addStyle(token.value, colors.variable));
                 }
                 else if (token.type === TOKEN_TYPES.CALLABLE) {

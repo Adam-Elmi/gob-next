@@ -178,7 +178,6 @@ export default function lexer(src: string) {
                             addToken(TOKEN_TYPES.LENGTH, word);
                         }
                         else if (word === "daabac" || word === "daabacLn") {
-                            console.log("here: ", word)
                             const t = word === "daabac" ? TOKEN_TYPES.PRINT : TOKEN_TYPES.PRINTLN;
                             addToken(t, word);
                         }
